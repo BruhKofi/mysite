@@ -1,0 +1,14 @@
+{
+  "name": "Victor",
+  "homepage": "https://github.com/Tynnee/mysite",
+  "authors": [
+    "Tynnee <victorasantekyei@yahoo.co.uk>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "contact me first",
+  "private": true,
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}

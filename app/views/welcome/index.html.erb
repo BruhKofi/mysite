@@ -1,7 +1,51 @@
-<!--Module Title-->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<style type="text/css">
+	.panel {
+		height: 100%;
+		width: 100%;
+	}
+	.panel.green {
+		margin-bottom: 400px
+	}
+</style>
+<section class="panel blue">
+	<b>ONE</b>
+</section>
+<section class="panel turqoise">
+	<b>TWO</b>
+</section>
+<section class="panel green">
+	<b>THREE</b>
+</section>
+<section class="panel bordeaux">
+	<b>FOUR</b>
+</section>
+<script>
+	$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll("section.panel");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+	});
+</script>
+<!--Navigation-->
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">
     <div id="titles">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
             <li>
                 <a href="#moduletitles">Home</a>
             </li>
@@ -21,9 +65,31 @@
     </div>
 </nav>
 
+
+
+
+
+
+
+<i class="fa fa-spinner" aria-hidden="true"></i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id=moduletitle class="jumbotron text-center">
     <h2>
         <mark>Hello I'm Victor</mark>
+
         <p>
             All our knowledge begins with the senses, proceeds then to the understanding, and ends with reason.<br>
             There is nothing higher than reason.
@@ -35,11 +101,11 @@
 
     <div class="row">
 
-        <div id="pic1" class="col-lg-4">
+        <div id="pic1" class="col-lg-4 animated bounce">
             <img src="/assets/terrace.JPG" alt="Victor Asante-Kyei" class="img-responsive img-circle"/>
         </div>
 
-        <div id="aboutme" class="col-lg-8">
+        <div id="aboutme" class="col-lg-8 animated bounce">
             <h2>About Me
             </h2>
             <p>
